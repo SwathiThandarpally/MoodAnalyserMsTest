@@ -16,5 +16,15 @@ namespace MoodAnalyserTest
             string expected = "Sad";
             Assert.AreEqual(expected, AcutalResult);
         }
+        [TestMethod]
+        public void GiveMoodShouldReturnHappMood()
+        {
+            const string happymood = "Happy";
+            const string sadmood = "Sad";
+            MoodAnalyser mood = new MoodAnalyser();
+            string AcutalResult = mood.Mood(happymood);
+            string expected = "Happy";
+            Assert.AreEqual(expected, AcutalResult);
+        }
     }
 }
