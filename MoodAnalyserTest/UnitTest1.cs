@@ -46,6 +46,23 @@ namespace MoodAnalyserTest
             //Assert
             Assert.AreNotEqual(null, checknullmood);
         }
+        [TestMethod]
+
+        public void CheckInvalidMood()
+        {
+
+            //Arrange
+
+            InvalidCustomException invalidMoodException = new InvalidCustomException(string.Empty);
+
+            //Act
+            string checkinvalidmood = invalidMoodException.ToString();
+
+
+            //Assert
+            Assert.AreNotEqual(null, checkinvalidmood);
+
+        }
     }
 
 }
