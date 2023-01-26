@@ -6,25 +6,19 @@ namespace MoodAnalyserTest
     public class UnitTest1
     {
         [TestMethod]
+        public void CheckSadMood()
+        {
 
-        public void GiveMoodShouldReturnSadMood()
-        {
-            const string happymood = "Happy";
-            const string sadmood = "Sad";
-            MoodAnalyser mood = new MoodAnalyser();
-            string AcutalResult = mood.Mood(sadmood);
-            string expected = "Sad";
-            Assert.AreEqual(expected, AcutalResult);
-        }
-        [TestMethod]
-        public void GiveMoodShouldReturnHappMood()
-        {
-            const string happymood = "Happy";
-            const string sadmood = "Sad";
-            MoodAnalyser mood = new MoodAnalyser();
-            string AcutalResult = mood.Mood(happymood);
-            string expected = "Happy";
-            Assert.AreEqual(expected, AcutalResult);
+            //Arrange
+            MoodAnalyserProblem.MoodAnalyser moodAnalyser1 = new MoodAnalyser("Iam in Sad Mood");
+
+
+            //Act
+            string checksadmood = moodAnalyser1.AnalyseMood();
+
+            //Assert
+            Assert.AreEqual("SAD", checksadmood);
         }
     }
+
 }
