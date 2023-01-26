@@ -31,6 +31,21 @@ namespace MoodAnalyserTest
             //Assert
             Assert.AreEqual("HAPPY", checkhappymood);
         }
+        [TestMethod]
+        public void CheckNullMood()
+        {
+
+            //Arrange
+
+            NullMoodException nullMoodException = new NullMoodException(null);
+
+            //Act
+            string checknullmood = nullMoodException.ToString();
+
+
+            //Assert
+            Assert.AreNotEqual(null, checknullmood);
+        }
     }
 
 }
