@@ -8,6 +8,13 @@ namespace MoodAnalyserProblem
 {
     public  class InvalidCustomException: Exception
     {
+        public enum ExceptionType
+        {
+            EMPTY_MOOD,
+            NULL_MOOD,
+        }
+
+        public ExceptionType exceptionType;
         public InvalidCustomException(string message) : base(message)
         {
             message = string.Empty;

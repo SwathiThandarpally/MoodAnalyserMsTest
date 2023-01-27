@@ -63,6 +63,18 @@ namespace MoodAnalyserTest
             Assert.AreNotEqual(null, checkinvalidmood);
 
         }
+        [TestMethod]
+        public void CheckMoodREflection()
+        {
+            //Arrange
+            MoodReflection moodReflection = new MoodReflection();
+
+            //Act
+            string checkmoodreflection = moodReflection.ToString();
+
+            //Assert
+            Assert.AreNotEqual(moodReflection, checkmoodreflection);
+        }
     }
 
 }
