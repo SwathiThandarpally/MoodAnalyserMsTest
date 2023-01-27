@@ -89,6 +89,19 @@ namespace MoodAnalyserTest
             //Assert
             Assert.AreNotEqual(moodAnalyseReflector, checkmoodreflection);
         }
+        [TestMethod]
+
+        public void MoodChangeReflector()
+        {
+            //Arrange
+            MoodChangeRefactory moodChangeReflector = new MoodChangeRefactory();
+
+            //Act
+            string checkchangereflector = moodChangeReflector.ToString();
+
+            //Assert
+            Assert.AreNotEqual(checkchangereflector, moodChangeReflector);
+        }
     }
 
 }
